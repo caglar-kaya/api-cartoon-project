@@ -1,0 +1,21 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-color: white;
+}
+
+body {
+  margin: 10px;
+  height: 100vh;
+  font-size: 20px;
+  border: 1px solid red;
+}
+
+#user-interface {
+  border: 1px solid red;
+  margin: 10px;
+}
