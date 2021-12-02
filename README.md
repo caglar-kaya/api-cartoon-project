@@ -1,5 +1,7 @@
 # api-cartoon-project
 
+[DEMO link](https://caglar-kaya.github.io/api-cartoon-project/)
+
 ## Description of Project
 
 ### Must-Have
@@ -18,5 +20,3 @@
 - The app has a search section for searching a character with name (To-Do)
 - There is a button to search (To-Do)
 - If searching is successful, then user see a card like descripted in must-have (To-Do)
-
-[DEMO link](https://caglar-kaya.github.io/api-cartoon-project/)
