@@ -1,6 +1,6 @@
 'use strict';
 
-export const generateRandomNumber = () => {
-  const randomNumber = Math.floor(Math.random() * 20);
+export const generateRandomNumber = (maxNumber) => {
+  const randomNumber = Math.floor(Math.random() * maxNumber);
   return randomNumber;
 }

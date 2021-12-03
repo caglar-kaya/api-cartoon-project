@@ -1,6 +1,6 @@
 'use strict';
 
-import { SEARCH_CONTAINER_ID, SEARCH_TEXT_BUTTON_CONTAINER_ID, BUTTON_SEARCH_ID } from "../constants.js";
+import { SEARCH_CONTAINER_ID, SEARCH_TEXT_BUTTON_CONTAINER_ID } from "../constants.js";
 import { getDOMElement, createDOMElement } from "../utils/DOMUtils.js";
 
 export const createSearchTextAndButton = () => {
@@ -13,7 +13,7 @@ export const createSearchTextAndButton = () => {
   searchText.placeholder = 'enter character name to search';
   searchTextButtonContainer.appendChild(searchText);
 
-  const buttonSearch = createDOMElement('button', { id: BUTTON_SEARCH_ID });
+  const buttonSearch = createDOMElement('button');
   buttonSearch.type = 'submit';
   buttonSearch.textContent = 'SEARCH FOR CHARACTER';
   searchTextButtonContainer.appendChild(buttonSearch);
