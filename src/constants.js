@@ -8,3 +8,7 @@ export const CARD_ID = 'card';
 export const CARD_TITLE_ID = 'card-title';
 export const CARD_IMAGE_ID = 'card-image';
 export const CARD_INFOS_ID = 'card-infos';
+export const SEARCH_CONTAINER_ID = 'search-container';
+export const SEARCH_TEXT_BUTTON_CONTAINER_ID = 'search-text-button-container';
+export const BUTTON_SEARCH_ID = 'button-search';
+export const SEARCH_RESULT_CONTAINER_ID = 'search-result-container';

@@ -31,6 +31,12 @@ body {
   margin: 10px;
 }
 
+#button-random {
+  border: 1px solid red;
+  margin: 10px;
+  padding: 10px;
+}
+
 #card-container {
   border: 1px solid red;
   margin: 10px;
@@ -43,4 +49,31 @@ body {
   border: 1px solid red;
   margin: 10px;
   width: 30%;
+}
+
+#search-container {
+  border: 1px solid red;
+  margin: 10px;
+}
+
+#search-text-button-container {
+  border: 1px solid red;
+  margin: 10px;
+}
+
+input {
+  margin: 10px;
+  padding: 10px;
+  width: 210px;
+}
+
+#button-search {
+  border: 1px solid red;
+  margin: 10px;
+  padding: 10px;
+}
+
+#search-result-container {
+  border: 1px solid red;
+  margin: 10px;
 }
