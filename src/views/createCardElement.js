@@ -1,63 +1,56 @@
 'use strict';
 
 import { createDOMElement, getDOMElement } from "../utils/DOMUtils.js";
-import { CARD_CONTAINER_ID, CARD_ID, CARD_TITLE_ID, CARD_IMAGE_ID, CARD_INFOS_ID } from "../constants.js";
+import { CARD_CONTAINER_ID } from "../constants.js";
 import { fetchData } from "../helpers/fetchData.js";
 import { URL_CHARACTERS } from "../constants.js";
 import { generateRandomNumber } from "../helpers/generateRandomNumber.js";
 
 export const createCardElement = async () => {
-  const data = await fetchData(URL_CHARACTERS);
 
-  let cardNumber = 1;
-  let cardTitleNumber = 1;
-  let cardImageNumber = 1;
-  let cardInfosNumber = 1;
+  const mainData = await fetchData(URL_CHARACTERS);
+  const randomNumber = generateRandomNumber(mainData.info.pages) + 1; // [1, 42] number of pages
+  const randomPageData = await fetchData(`${URL_CHARACTERS}?page=${randomNumber}`);
 
-  for (let i = 0; i < 9; i++) {
+  const cardContainer = getDOMElement(CARD_CONTAINER_ID);
 
-    const randomNumber = generateRandomNumber();
-    const cardContainer = getDOMElement(CARD_CONTAINER_ID);
+  for (let i = 0; i < randomPageData.results.length; i++) {
 
-    const cardElement = createDOMElement('div', { id: `${CARD_ID}-${cardNumber}` });
-    cardNumber++;
+    const cardElement = createDOMElement('div');
     cardElement.classList.add('card-element');
     cardContainer.appendChild(cardElement);
 
-    const cardTitle = createDOMElement('div', { id: `${CARD_TITLE_ID}-${cardTitleNumber}` });
-    cardTitleNumber++;
+    const cardTitle = createDOMElement('div');
     cardElement.appendChild(cardTitle);
 
     const cardTitleName = createDOMElement('h2');
-    cardTitleName.textContent = data.results[randomNumber].name;
+    cardTitleName.textContent = randomPageData.results[i].name;
     cardTitle.appendChild(cardTitleName);
 
-    const cardImage = createDOMElement('div', { id: `${CARD_IMAGE_ID}-${cardImageNumber}` });
-    cardImageNumber++;
+    const cardImage = createDOMElement('div');
     cardElement.appendChild(cardImage);
 
     const image = createDOMElement('img');
-    image.src = data.results[randomNumber].image;
-    image.alt = data.results[randomNumber].name;
+    image.src = randomPageData.results[i].image;
+    image.alt = randomPageData.results[i].name;
     cardImage.appendChild(image);
 
-    const cardInfos = createDOMElement('div', { id: `${CARD_INFOS_ID}-${cardInfosNumber}` });
-    cardInfosNumber++;
+    const cardInfos = createDOMElement('div');
     cardElement.appendChild(cardInfos);
 
     const cardInfosList = createDOMElement('ul');
     cardInfos.appendChild(cardInfosList);
 
     const cardInfosListItem1 = createDOMElement('li');
-    cardInfosListItem1.textContent = `Gender: ${data.results[randomNumber].gender}`;
+    cardInfosListItem1.textContent = `Gender: ${randomPageData.results[i].gender}`;
     cardInfosList.appendChild(cardInfosListItem1);
 
     const cardInfosListItem2 = createDOMElement('li');
-    cardInfosListItem2.textContent = `Species: ${data.results[randomNumber].species}`;
+    cardInfosListItem2.textContent = `Species: ${randomPageData.results[i].species}`;
     cardInfosList.appendChild(cardInfosListItem2);
 
     const cardInfosListItem3 = createDOMElement('li');
-    cardInfosListItem3.textContent = `Status: ${data.results[randomNumber].status}`;
+    cardInfosListItem3.textContent = `Status: ${randomPageData.results[i].status}`;
     cardInfosList.appendChild(cardInfosListItem3);
 
   }
