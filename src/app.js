@@ -5,6 +5,7 @@ import { createCardElement } from "../src/views/createCardElement.js";
 import { URL_CHARACTERS } from "./constants.js";
 import { createSearchMenu } from "./views/createSearchMenu.js";
 import { clickSearchButton } from "../src/handlers/clickSearchButton.js";
+import { createHeaderSection } from "../src/views/createHeaderSection.js";
 
 export const main = async () => {
   try {
@@ -20,9 +21,11 @@ export const main = async () => {
     console.log('https://rickandmortyapi.com/api/character/?page=2&name=rick&status=alive');
     console.log(data3);
 
-    createCardElement();
+    createHeaderSection();
 
     createSearchMenu();
+
+    createCardElement();
 
     clickSearchButton();
 
