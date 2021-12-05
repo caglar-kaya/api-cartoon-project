@@ -12,6 +12,10 @@ export const createSearchResultAsCard = async (characterName, status) => {
   const searchResultContainer = createDOMElement('div', { id: SEARCH_RESULT_CONTAINER_ID });
   searchContainer.appendChild(searchResultContainer);
 
+  const resultTextContainer = createDOMElement('div');
+  resultTextContainer.classList.add('result-text-container');
+  searchResultContainer.appendChild(resultTextContainer);
+
   const resultCardContainer = createDOMElement('div');
   resultCardContainer.classList.add('result-card-container');
   searchResultContainer.appendChild(resultCardContainer);
@@ -19,6 +23,14 @@ export const createSearchResultAsCard = async (characterName, status) => {
   const searchResultData = await fetchData(`${URL_CHARACTERS}/?name=${characterName}&status=${status}`);
 
   if (searchResultData.info.count >= 1) {
+
+    const searchResultText = createDOMElement('h3');
+    if (searchResultData.info.count === 1) {
+      searchResultText.textContent = `You have only 1 character for your search.`;
+    } else {
+      searchResultText.textContent = `You have ${searchResultData.info.count} characters for your search.`;
+    }
+    resultTextContainer.appendChild(searchResultText);
 
     for (let i = 1; i <= searchResultData.info.pages; i++) {
 

@@ -2,13 +2,16 @@
 
 import { getDOMElement } from "../utils/DOMUtils.js";
 import { createSearchResultAsCard } from "../views/createSearchResultAsCard.js";
-import { SEARCH_RESULT_CONTAINER_ID, SEARCH_CONTAINER_ID } from "../constants.js";
+import { SEARCH_RESULT_CONTAINER_ID, SEARCH_CONTAINER_ID, CARD_CONTAINER_ID } from "../constants.js";
 
 export const clickSearchButton = () => {
 
   const inputText = document.querySelector('input');
   const selectStatus = document.querySelector('select');
   const searchButton = document.querySelector('button');
+
+  const userInterfaceContainer = getDOMElement('user-interface');
+  const cardContainer = getDOMElement(CARD_CONTAINER_ID);
 
   searchButton.addEventListener('click', () => {
 
@@ -20,5 +23,10 @@ export const clickSearchButton = () => {
     }
 
     createSearchResultAsCard(inputText.value, selectStatus.value);
+
+    if (cardContainer) {
+      userInterfaceContainer.removeChild(cardContainer);
+    }
+
   });
 }

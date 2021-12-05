@@ -31,6 +31,16 @@ div {
   margin: 10px;
 }
 
+#header-container {
+  border: 1px solid red;
+  margin: 10px;
+}
+
+.result-text-container {
+  border: 1px solid red;
+  margin: 10px;
+}
+
 #card-container,
 .result-card-container {
   border: 1px solid red;
