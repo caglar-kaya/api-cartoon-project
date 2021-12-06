@@ -1,11 +1,12 @@
 'use strict';
 
-import { fetchData } from "./helpers/fetchData.js";
-import { createCardElement } from "../src/views/createCardElement.js";
-import { URL_CHARACTERS } from "./constants.js";
-import { createSearchMenu } from "./views/createSearchMenu.js";
-import { clickSearchButton } from "../src/handlers/clickSearchButton.js";
-import { createHeaderSection } from "../src/views/createHeaderSection.js";
+import { fetchData } from './helpers/fetchData.js';
+import { createCardElement } from '../src/views/createCardElement.js';
+import { URL_CHARACTERS } from './constants.js';
+import { createSearchMenu } from './views/createSearchMenu.js';
+import { clickSearchButton } from '../src/handlers/clickSearchButton.js';
+import { createHeaderSection } from '../src/views/createHeaderSection.js';
+import { createInfoElement } from '../src/views/createInfoElement.js';
 
 export const main = async () => {
   try {
@@ -14,22 +15,29 @@ export const main = async () => {
     console.log(data);
 
     const data2 = await fetchData(`${URL_CHARACTERS}/?name=rick&status=alive`);
-    console.log('https://rickandmortyapi.com/api/character/?name=rick&status=alive');
+    console.log(
+      'https://rickandmortyapi.com/api/character/?name=rick&status=alive',
+    );
     console.log(data2);
 
-    const data3 = await fetchData(`${URL_CHARACTERS}/?page=2&name=rick&status=alive`);
-    console.log('https://rickandmortyapi.com/api/character/?page=2&name=rick&status=alive');
+    const data3 = await fetchData(
+      `${URL_CHARACTERS}/?page=2&name=rick&status=alive`,
+    );
+    console.log(
+      'https://rickandmortyapi.com/api/character/?page=2&name=rick&status=alive',
+    );
     console.log(data3);
 
     createHeaderSection();
 
     createSearchMenu();
 
+    createInfoElement();
+
     createCardElement();
 
     clickSearchButton();
-
   } catch (error) {
     console.log(error);
   }
-}
+};

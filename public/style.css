@@ -48,7 +48,7 @@ p {
 
 h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 p {
@@ -100,14 +100,19 @@ button {
   margin: 10px;
 }
 
-.result-text-container h3 {
+#info-container {
+  margin: 20px 10px;
+}
+
+h3 {
   background-color: var(--purple-background);
   padding: 10px;
   text-align: center;
   color: var(--white-color);
-  width: 80%;
+  width: 85%;
   margin: 0px auto;
   border-radius: 5px;
+  font-size: 2rem;
 }
 
 #card-container,
