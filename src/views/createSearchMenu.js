@@ -10,7 +10,7 @@ export const createSearchMenu = () => {
   searchContainer.appendChild(searchMenuContainer);
 
   const searchText = createDOMElement('input');
-  searchText.placeholder = 'enter character name to search';
+  searchText.placeholder = 'enter a character name to search';
   searchMenuContainer.appendChild(searchText);
 
   const searchSelect = createDOMElement('select');
