@@ -10,36 +10,33 @@
 
 ## ✨ Directory Layout and Tree
 
-├── .DS_Store
-├── .gitignore
-├── .vscode
-│  └── settings.json
+```
+.
+├── README.md
 ├── index.html
 ├── public
-│  ├── .DS_Store
-│  ├── images
-│  │  ├── .DS_Store
-│  │  └── app-demo.png
-│  └── style.css
-├── README.md
+│   ├── images
+│   │   └── app-demo.png
+│   └── style.css
 └── src
-  ├── app.js
-  ├── constants.js
-  ├── handlers
-  │  └── clickSearchButton.js
-  ├── helpers
-  │  ├── fetchData.js
-  │  └── generateRandomNumber.js
-  ├── init
-  │  └── initializeApp.js
-  ├── utils
-  │  └── DOMUtils.js
-  └── views
-    ├── createCardElement.js
-    ├── createHeaderSection.js
-    ├── createInfoElement.js
-    ├── createSearchMenu.js
-    └── createSearchResultAsCard.js
+    ├── app.js
+    ├── constants.js
+    ├── handlers
+    │   └── clickSearchButton.js
+    ├── helpers
+    │   ├── fetchData.js
+    │   └── generateRandomNumber.js
+    ├── init
+    │   └── initializeApp.js
+    ├── utils
+    │   └── DOMUtils.js
+    └── views
+        ├── createCardElement.js
+        ├── createHeaderSection.js
+        ├── createInfoElement.js
+        ├── createSearchMenu.js
+        └── createSearchResultAsCard.js
+```
 
 [![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#top)
 
