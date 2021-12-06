@@ -1,12 +1,20 @@
 <h1 align="center" id="top">✨ Rick and Morty API App as a Single Page Application ✨</h1>
 
-## ✨ [DEMO - Rick and Morty API App](https://caglar-kaya.github.io/api-cartoon-project/)
+## ✨ Demo
+
+Online Deployment of this project is available at [Rick and Morty API App](https://caglar-kaya.github.io/api-cartoon-project/)
 
 <p>
   <a href="https://caglar-kaya.github.io/api-cartoon-project/" target="_blank">
     <img alt="Rick and Morty API App" src="./public/images/app-demo.png" />
   </a>
 </p>
+
+## ✨ Description
+
+Rick and Morty is an American adult animated science fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon Network's nighttime programming block, Adult Swim.
+
+In my application, when you start it or refresh the page, you can display 20 characters out of 826 characters randomly and also you can search for characters according to their names and status.
 
 ## ✨ Directory Layout and Tree
 
@@ -39,6 +47,14 @@
 ```
 
 [![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#top)
+
+## ✨ Application
+
+- Arrow Functions
+- Template Literals
+- Block-Scoped Variables Let and Const
+- async await with try/catch
+- Modules export/import
 
 > Created by [Caglar Kaya](https://github.com/caglar-kaya)
 These projects created using: <br> 
@@ -73,22 +89,3 @@ Give a ⭐️ if you liked my projects!
 ## 📝 License
 
 Copyright © 2021 [Caglar Kaya](https://github.com/caglar-kaya).
-
-## Description of Project
-
-### Must-Have
-
-- The app must be constructed as a single page application (Done)
-- The app must interact with [an API](https://rickandmortyapi.com/) to grab data (Done)
-- The app must have loading/error handling for the interaction with the API. (Done)
-- There must be a button to create 9 cards randomly (In-progress)
-- A card must have a name of character as title (Done)
-- A card must have a picture of character as img (Done)
-- A card must have footer that includes a character's gender, species, and status (Done)
-- The app must be styled according to [cartoonnetwork.nl](https://www.cartoonnetwork.nl/) (In-progress)
-
-### Nice-To-Have
-
-- The app has a search section for searching a character with name (To-Do)
-- There is a button to search (To-Do)
-- If searching is successful, then user see a card like descripted in must-have (To-Do)
