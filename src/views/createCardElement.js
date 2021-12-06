@@ -21,6 +21,7 @@ export const createCardElement = async () => {
     cardContainer.appendChild(cardElement);
 
     const cardTitle = createDOMElement('div');
+    cardTitle.classList.add('card-title');
     cardElement.appendChild(cardTitle);
 
     const cardTitleName = createDOMElement('h2');
@@ -28,6 +29,7 @@ export const createCardElement = async () => {
     cardTitle.appendChild(cardTitleName);
 
     const cardImage = createDOMElement('div');
+    cardImage.classList.add('card-image');
     cardElement.appendChild(cardImage);
 
     const image = createDOMElement('img');
@@ -36,6 +38,7 @@ export const createCardElement = async () => {
     cardImage.appendChild(image);
 
     const cardInfos = createDOMElement('div');
+    cardInfos.classList.add('card-infos');
     cardElement.appendChild(cardInfos);
 
     const cardInfosList = createDOMElement('ul');

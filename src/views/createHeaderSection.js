@@ -18,7 +18,8 @@ export const createHeaderSection = () => {
   headerContainer.appendChild(headerParagraph1);
 
   const headerParagraph2 = createDOMElement('p');
-  headerParagraph2.textContent = `In my application, you can search for
+  headerParagraph2.textContent = `In my application, when you start it or refresh the page,
+   you can display 20 different characters among 826 characters randomly and also you can search for
    characters according to their names and status.`;
   headerContainer.appendChild(headerParagraph2);
 }
