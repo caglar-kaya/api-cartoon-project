@@ -18,12 +18,6 @@
   --purple-background: #98368c;
 }
 
-.scrollable {
-  height: auto;
-  max-height: 90vh;
-  overflow: auto;
-}
-
 body {
   width: 90%;
   margin: 0px auto;
@@ -153,7 +147,6 @@ h2 {
 
 img {
   width: 100%;
-  max-height: 300px;
 }
 
 .card-infos {

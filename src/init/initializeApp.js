@@ -16,7 +16,6 @@ const initializeApp = () => {
 
 const setupAppHTML = () => {
   const userInterfaceContainer = getDOMElement('user-interface');
-  userInterfaceContainer.classList.add('scrollable');
 
   const headerContainer = createDOMElement('div', { id: HEADER_CONTAINER_ID });
   const searchContainer = createDOMElement('div', { id: SEARCH_CONTAINER_ID });
